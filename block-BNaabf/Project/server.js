@@ -7,6 +7,7 @@ let server = http.createServer(handleRequest);
 
 function handleRequest(req, res) {
     if(req.method === 'GET' && req.url === '/form') {
+        res.setHeader('Content-Type', 'text/html');
         fs.createReadStream('./form.html').pipe(res);
     } else if(req.method === 'POST' && req.url === '/form') {
         let store = '';
