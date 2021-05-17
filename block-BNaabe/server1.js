@@ -1,6 +1,6 @@
 let path = require('path');
 
-let serverPath = path.join(__dirname, __filename);
+let serverPath = __filename;
 let appPath = path.join(__dirname, '/app.js');
 let indexPath = './index.html'
 let indexAbsolutePath = path.join(__dirname, '/index.html') 
